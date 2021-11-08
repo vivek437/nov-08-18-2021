@@ -1,12 +1,27 @@
 package com.intuit.day01web;
 
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.WebRequest;
 
 import java.util.Arrays;
 import java.util.List;
 
 @RestController
 public class SampleController {
+
+    @GetMapping("/weird")
+    public String doSomethingWeird() {
+        int i = 10;
+        int j = 0;
+        int q = i / j;
+        return "Cool: " + q;
+    }
+
+//    @ExceptionHandler
+//    public String handleWeirdException(ArithmeticException ex, WebRequest req) {
+//        String message = "Error occured: " + ex.getMessage();
+//        return message;
+//    }
 
     @GetMapping("/topics")
     public List<String> getTopicsForTraining() {
