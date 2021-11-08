@@ -2,3 +2,13 @@ company:
   name: Intuit
   headOffice: Atlanta
   employees: 100000
+
+sessions:
+  topics:
+   - Functional programming with Groovy - 60 min
+   - Scala Tricks - 45 min
+   - Spring unit testing - 50 min
+   - Unit testing JavaScript - 50 min
+   - Concurrency on the JVM - 60 min
+   - Grails for MVC- 45 min
+   - Server side JavaScript - 50 min
