@@ -9,21 +9,32 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-//@ConfigurationProperties(prefix = "company")
+@ConfigurationProperties(prefix = "company")
 public class Company {
     @Autowired
     @Qualifier("locationsInIndia")
     private List<String> locations;
 
-    @Value("${company.name}")
+   // @Value("${company.name}")
     private String name;
 
-    @Value("${company.headOffice}")
+  //  @Value("${company.headOffice}")
     private String headOffice;
 
-    @Value("${company.employees}")
+ //   @Value("${company.employees}")
     private long employees;
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setHeadOffice(String headOffice) {
+        this.headOffice = headOffice;
+    }
+
+    public void setEmployees(long employees) {
+        this.employees = employees;
+    }
 
     @Autowired
     private Employee ceo;
