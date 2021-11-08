@@ -10,6 +10,8 @@ const instructor = {
 
 * __Not in specific order__
 
+<br/>
+
 *	Dependency injection
 *	Beans configuration
 *	Annotations
