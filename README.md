@@ -6,7 +6,9 @@ const instructor = {
 } 
 ```
 
-## ToDo
+## ToDo 
+
+* __Not in specific order__
 
 *	Dependency injection
 *	Beans configuration
