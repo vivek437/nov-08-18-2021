@@ -52,7 +52,7 @@ const instructor = {
 *	Topics, Partitions
 *	Consumer group
 *	Error handling
-*	Kakfka Streams
+*	Kafka Streams
 *	Exercises
 
 <br/>
