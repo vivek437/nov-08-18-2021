@@ -1,5 +1,6 @@
 package com.intuit.day01hellosb;
 
+import com.info.Employee;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -18,5 +19,10 @@ public class AppConfiguration {
     @Primary
     public List<String> locationsInUSA() {
         return Arrays.asList("Houston", "Charolotte", "Boston");
+    }
+
+    @Bean
+    public Employee employee() {
+        return new Employee();
     }
 }

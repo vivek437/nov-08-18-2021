@@ -29,6 +29,6 @@ public class Day01HelloSbApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println(helloWorld.getMessage());
         System.out.println(training.details());
-        System.out.println(company.getLocations());
+        System.out.println(company);
     }
 }
