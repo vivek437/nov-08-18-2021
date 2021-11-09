@@ -8,6 +8,7 @@ import org.springframework.web.client.RestTemplate;
 public class Lab02Configuration {
     @Bean
     public RestTemplate restTemplate() {
+        //Construct a complex RestTemplate object by specifying Security tokens, HTTP Headers etc
         return new RestTemplate();
     }
 }

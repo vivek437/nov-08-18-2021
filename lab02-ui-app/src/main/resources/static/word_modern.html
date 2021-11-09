@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        let talkToServer = () => {
+            let word = document.getElementById("word").value;
+            let url = `/wordplay?word=${word}`;
+            fetch(url, {method: "post"})
+                .then(response => response.text())
+                .then(data => document.getElementById("result").innerHTML = data);
+        };
+    </script>
+</head>
+<body>
+        <input type="text" placeholder="Enter your word" id="word"><br/>
+        <button onclick="talkToServer();">Click</button>
+        <h2 id="result"></h2>
+</body>
+</html>
