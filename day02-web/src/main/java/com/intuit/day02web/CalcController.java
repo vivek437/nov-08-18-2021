@@ -14,6 +14,25 @@ import java.time.Instant;
 @RestController
 public class CalcController {
 
+    @GetMapping("/product/{num1}/{num2}")
+    public HttpEntity<Result> multiply(@PathVariable("num1") int num1, @PathVariable int num2) {
+        int result = num1 * num2;
+        ResponseEntity<Result> response =  null;
+        if(num1 < 100) {
+            SmallResult smallResult = new SmallResult();
+            smallResult.setValue(result);
+            smallResult.setType(SmallResult.class.getTypeName());
+            response = new ResponseEntity<>(smallResult, HttpStatus.OK);
+        } else {
+            LargeResult largeResult = new LargeResult();
+            largeResult.setValue(result);
+            largeResult.setType(LargeResult.class.getTypeName());
+            response = new ResponseEntity<>(largeResult, HttpStatus.OK);
+        }
+
+        return response;
+    }
+
     @GetMapping("/add/{num1}/{num2}")
     public int add(@PathVariable("num1") int num1, @PathVariable int num2) {
         return num1 + num2;
