@@ -1,6 +1,8 @@
 package com.intuit.day02web;
 
-public class CalcResult {
+import org.springframework.hateoas.RepresentationModel;
+
+public class CalcResult extends RepresentationModel<CalcResult> {
     private int resultValue;
 
     public int getResultValue() {
