@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: ui-app
+
+server:
+  port: 8081
+
+palindrome:
+  service:
+    base:
+      url: http://localhost:8082/palindrome
