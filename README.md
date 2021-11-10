@@ -13,23 +13,22 @@ const instructor = {
 <br/>
 
 - [x] Dependency injection
-*	Beans configuration
-*	Annotations
-*	Spring boot Initializr
-*	RESTful services
-*	RestController, Mapping
-*	PathVariable, RequestParam
-*	Exercises
+- [x] Beans configuration
+- [x] Annotations
+- [x] Spring boot Initializr
+- [x] RESTful services
+- [x] RestController, Mapping
+- [x] PathVariable, RequestParam
 
 <br/>
 
-*	@Configuration, @Bean
-*	YML files
+- [x] @Configuration, @Bean
+- [x] YML files
 *	Health check using Actuator
 *	Securing actuator
 *	Spring Cloud Config
 *	Profiles
-*	Hypermedia
+- [x] Hypermedia
 *	Unit testing Spring boot
 *	Mocking
 *	TestRestTemplate
@@ -46,9 +45,9 @@ const instructor = {
 <br/>
 
 *	JmsTemplate, JmsListener
-*	RabbitMQ
+- [x] RabbitMQ
 *	Integrating Kafka
-*	Producer, Consumer
+- [x] Producer, Consumer
 *	Topics, Partitions
 *	Consumer group
 *	Error handling
