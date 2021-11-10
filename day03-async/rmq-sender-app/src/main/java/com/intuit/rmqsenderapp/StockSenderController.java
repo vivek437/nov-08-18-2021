@@ -16,4 +16,10 @@ public class StockSenderController {
         rabbitTemplate.convertAndSend("q-stock", symbol);
         return "Message sent";
     }
+
+    @PostMapping("/publish/{symbol}")
+    public String publish(@PathVariable String symbol) {
+        rabbitTemplate.convertAndSend("e-stock-exchange", "", symbol);
+        return "Message sent";
+    }
 }

@@ -4,3 +4,7 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
+
+queue:
+  stock: q-stock
+  type: q-newsagency
