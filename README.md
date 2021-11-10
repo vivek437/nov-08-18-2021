@@ -12,7 +12,7 @@ const instructor = {
 
 <br/>
 
-*	Dependency injection
+- [x] Dependency injection
 *	Beans configuration
 *	Annotations
 *	Spring boot Initializr
