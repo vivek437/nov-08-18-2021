@@ -19,4 +19,11 @@ public class StockReceiver {
         String message = String.format("Received %s. CMP is %s", symbol, price+"");
         System.out.println(message);
     }
+
+    @RabbitListener(queues = "${topic.name}")
+    public void receiveStockSymbolFromTopicExchange(String symbol) {
+        double price = Math.random() * 1000;
+        String message = String.format("Received %s. CMP is %s", symbol, price+"");
+        System.out.println(message);
+    }
 }

@@ -22,4 +22,10 @@ public class StockSenderController {
         rabbitTemplate.convertAndSend("e-stock-exchange", "", symbol);
         return "Message sent";
     }
+
+    @PostMapping("/topics/{symbol}/{key}")
+    public String publishToTopicExchange(@PathVariable String symbol, @PathVariable String key) {
+        rabbitTemplate.convertAndSend("e-topic-exchange", key, symbol);
+        return "Message sent";
+    }
 }

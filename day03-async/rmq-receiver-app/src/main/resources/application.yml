@@ -8,3 +8,5 @@ spring:
 queue:
   stock: q-stock
   type: q-newsagency
+topic:
+  name: q-topic1
