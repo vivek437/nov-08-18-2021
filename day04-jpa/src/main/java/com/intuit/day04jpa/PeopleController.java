@@ -5,6 +5,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
@@ -39,7 +40,12 @@ public class PeopleController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
+    @Transactional //Not the correct class to add this, but put it in a service class
     @PutMapping("/{id}/{age}")  //modify all the fields in a record except say the primary key
+    public void updateAge2(@PathVariable int id, @PathVariable int age) {
+        personRepository.updateAge(id, age);
+    }
+
     @PatchMapping("/{id}/{age}") //patch work; just modify one or more fields in the record
     public HttpEntity<Void> updateAge(@PathVariable int id, @PathVariable int age) {
         Optional<Person> optionalPerson = personRepository.findById(id);
