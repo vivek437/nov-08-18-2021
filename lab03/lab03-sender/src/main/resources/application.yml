@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: movie-sender
+  rabbitmq:
+    host: localhost
+    port: 5672
+
+server:
+  port: 8080
+
+movie:
+  exchange: movie-exchange
+  queue-input: q-movie-input
+  queue-input-routing-key: movie
+  queue-details: q-movie-output
+  queue-details-routing-key: movie.details
+  queue-error: q-movie-error
+  queue-error-routing-key: error
+
