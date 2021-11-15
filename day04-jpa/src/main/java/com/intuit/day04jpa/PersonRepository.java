@@ -21,6 +21,7 @@ public interface PersonRepository extends JpaRepository<Person, Integer> {
 
     //findBy, findAllBy, getAllBy, getBy
 
+    List<Person> findAllByNameInAndAgeIn(List<String> names, List<Integer> ages);
     List<Person> findAllByName(String name);
     List<Person> findAllByNameAndAge(String name, int age);
     List<Person> findAllByAgeAndName(int age, String name);
