@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/training
+    username: root
+    password: durasoft
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
