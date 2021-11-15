@@ -1,12 +1,25 @@
 package com.intuit.day04jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
 public interface PersonRepository extends JpaRepository<Person, Integer> {
 
-    //findBy, findAllBy
+    @Query("select p from Person p where p.age between :p1 and :p2")
+    List<Person> getPersonsWithAgeInRange(@Param("p1") int start, @Param("p2") int end);
+
+    @Modifying
+    @Query("update Person p set p.age= :p2 where p.id = :p1")
+    void updateAge(@Param("p1") int id, @Param("p2") int age);
+
+    @Query(value = "select * from persons p where p.age between :p1 and :p2", nativeQuery = true)
+    List<Person> getPersonsWithAgeBetween(@Param("p1") int start, @Param("p2") int end);
+
+    //findBy, findAllBy, getAllBy, getBy
 
     List<Person> findAllByName(String name);
     List<Person> findAllByNameAndAge(String name, int age);
