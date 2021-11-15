@@ -11,3 +11,11 @@
 * Creates objects of the classes(or beans) that you write
 * And your application can use the objects without having to worry about creating/destroying them
 * POJO framework
+
+### MySql
+* docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
+
+``` sql
+create database training;
+create table training.persons( id int(4) primary key not null auto_increment, name varchar(40), age int(4));
+```
