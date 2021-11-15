@@ -13,7 +13,7 @@
 * POJO framework
 
 ### MySql
-* docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
+* docker run --name -p3306:3306  mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
 
 ``` sql
 create database training;
