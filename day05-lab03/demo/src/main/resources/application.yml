@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/accountsdb
+    username: root
+    password: root
+
