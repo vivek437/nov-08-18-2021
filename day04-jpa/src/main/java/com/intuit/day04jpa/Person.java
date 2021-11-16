@@ -11,7 +11,6 @@ import java.util.List;
 
 @Entity
 @Table(name = "persons")
-@Validated
 public class Person {
     @Id
     @Column(name = "id")

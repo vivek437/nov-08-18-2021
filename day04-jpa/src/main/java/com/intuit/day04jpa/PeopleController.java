@@ -10,6 +10,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
+import javax.validation.Valid;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
@@ -17,7 +18,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/people")
-@Validated
 public class PeopleController {
     @Autowired
     private PersonRepository personRepository;
@@ -41,6 +41,12 @@ public class PeopleController {
         return "Person with id " + person.getId() + " created";
     }
 
+
+    @PostMapping("/")
+    public String savePersonRecord(@RequestBody @Valid Person person) {
+        personRepository.save(person);
+        return "Person with id: " + person.getId() + " is created";
+    }
 
     @PostMapping("/{name}/{age}")
     public String savePerson(@PathVariable String name, @PathVariable int age) {
