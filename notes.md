@@ -18,4 +18,5 @@
 ``` sql
 create database training;
 create table training.persons( id int(4) primary key not null auto_increment, name varchar(40), age int(4));
+create table training.cars( id int(4) primary key not null auto_increment, model varchar(40), year int(4), person_id int(4));
 ```
