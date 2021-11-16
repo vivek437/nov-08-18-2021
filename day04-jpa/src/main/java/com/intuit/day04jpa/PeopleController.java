@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +19,26 @@ import java.util.Optional;
 public class PeopleController {
     @Autowired
     private PersonRepository personRepository;
+
+    @PostMapping("/personwithcars")
+    public String createPersonWithCars() {
+        Person person = new Person();
+        person.setName("Ram");
+        person.setAge(23);
+        Car car1 = new Car();
+        car1.setModel("BMW");
+        car1.setYear(2020);
+        car1.setOwner(person);
+        Car car2 = new Car();
+        car2.setModel("Honda City");
+        car2.setYear(2021);
+        car2.setOwner(person);
+        List<Car> cars = Arrays.asList(car1, car2);
+        person.setCars(cars);
+        personRepository.save(person);
+        return "Person with id " + person.getId() + " created";
+    }
+
 
     @PostMapping("/{name}/{age}")
     public String savePerson(@PathVariable String name, @PathVariable int age) {

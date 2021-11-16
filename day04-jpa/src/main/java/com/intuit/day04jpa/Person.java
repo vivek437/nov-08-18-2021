@@ -1,6 +1,9 @@
 package com.intuit.day04jpa;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "persons")
@@ -15,6 +18,18 @@ public class Person {
 
     @Column
     private int age;
+
+    @JsonManagedReference //NOTHING TO DO WITH JPA
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    private List<Car> cars;
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
 
     public int getId() {
         return id;
