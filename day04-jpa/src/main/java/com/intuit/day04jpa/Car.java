@@ -3,6 +3,7 @@ package com.intuit.day04jpa;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "cars")
@@ -17,7 +18,7 @@ public class Car {
     @Column
     private int year;
 
-    @JsonBackReference //NOTHING TO DO WITH JPA
+    //@JsonBackReference //NOTHING TO DO WITH JPA
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "person_id")
     private Person owner;
