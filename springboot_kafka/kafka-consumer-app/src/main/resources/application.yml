@@ -1,0 +1,6 @@
+spring:
+  kafka:
+    consumer:
+      group-id: consumer-group-training
+      auto-offset-reset: earliest
+    bootstrap-servers: localhost:9092
