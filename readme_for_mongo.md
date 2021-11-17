@@ -28,6 +28,6 @@ services:
 
 ```	  
 
-* Run the following command __docker compose -f docker-compose-mongo.yml up__
+* Run the following command __docker-compose -f docker-compose-mongo.yml up__
 * After the services are started, go to __ http://localhost:9090 __  to view the mongo server on the web
 
