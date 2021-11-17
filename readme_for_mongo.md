@@ -1,3 +1,5 @@
+* Save the following yml in a __docker-compose-mongo.yml__ file
+
 ``` yml
 version: '3.1'
 
@@ -25,3 +27,7 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://root:root@mongo:27017/
 
 ```	  
+
+* Run the following command __docker compose -f docker-compose-mongo.yml up__
+* After the services are started, go to __ http://localhost:9090 __  to view the mongo server on the web
+
