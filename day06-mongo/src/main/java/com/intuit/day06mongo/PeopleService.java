@@ -20,7 +20,7 @@ public class PeopleService {
     }
 
     public List<Person> loadAllPersons() {
-        return personRepository.findAll();
+        return personRepository.getAll();
     }
 
     public void updateAge(String id, int age) {

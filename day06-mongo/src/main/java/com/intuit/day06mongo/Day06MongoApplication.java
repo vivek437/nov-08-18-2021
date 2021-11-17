@@ -19,8 +19,8 @@ public class Day06MongoApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         //peopleService.savePerson("Ram", "Narain", 12);
         //peopleService.savePerson("Sam", "Thomas", 22);
-        peopleService.updateAge("6194cb62da6e2611de858afd", 45);
-        peopleService.delete("6194cb63da6e2611de858afe");
+        //peopleService.updateAge("6194cb62da6e2611de858afd", 45);
+        //peopleService.delete("6194cb63da6e2611de858afe");
         System.out.println(peopleService.loadAllPersons());
 
     }
