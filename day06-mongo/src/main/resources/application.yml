@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      database: training
+      port: 27017
+      host: localhost
+      username: root
+      password: root
