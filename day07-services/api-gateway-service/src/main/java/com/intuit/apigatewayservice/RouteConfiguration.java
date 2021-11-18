@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
 public class RouteConfiguration {
 
     //http://localhost:8081/square/{num}  -> Original Mapping
-
     //http://localhost:7000/math/sq/{num} -> Gateway Mapping
 
     @Bean
