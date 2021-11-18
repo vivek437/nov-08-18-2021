@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        const getSquare = () => {
+            let num = document.getElementById("num").value;
+            let url = `/math/${num}`;
+            fetch(url, {method: 'POST'})
+            .then(response => response.text())
+            .then(data => document.getElementById("squareresult").innerHTML = data);
+        };
+    </script>
+</head>
+<body>
+    Enter your number <input type="number" id="num"> <br/>
+    <button onclick="getSquare()">Get Square</button>
+    <h2 id="squareresult"></h2>
+</body>
+</html>
