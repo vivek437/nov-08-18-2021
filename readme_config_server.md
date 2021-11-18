@@ -23,7 +23,6 @@ spring.cloud.config.server.git.default-label=main
 
 ```
 
-* Run http://localhost:8888/application to check
 
 #### Setting up Config Client
 
