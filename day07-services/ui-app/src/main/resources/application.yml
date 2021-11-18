@@ -9,3 +9,18 @@ square:
   service:
     base-url: http://localhost:8081/square
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    beans:
+      enabled: true
+    shutdown:
+      enabled: true
+  info:
+    env:
+      enabled: true
