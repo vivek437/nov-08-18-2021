@@ -5,7 +5,16 @@ type Book {
     inStock: Boolean
 }
 
+type Shoe {
+    id: ID!,
+    make: String,
+    price: Float,
+    inStock: Boolean
+}
+
 type Query {
     all: [Book],
-    books(inStock: Boolean): [Book]
+    books(inStock: Boolean): [Book],
+    allShoes: [Shoe],
+    shoes(inStock: Boolean): [Shoe],
 }

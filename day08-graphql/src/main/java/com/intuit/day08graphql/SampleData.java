@@ -20,4 +20,15 @@ public class SampleData {
         books.add(new Book("b105", "MNO", 200, true));
         return books;
     }
+
+    @Bean
+    public List<Shoe> getShoes() {
+        List<Shoe> shoes = new ArrayList<>();
+        shoes.add(new Shoe("s101", "Nike", 100, true));
+        shoes.add(new Shoe("s102", "Puma", 200, false));
+        shoes.add(new Shoe("s103", "Sparx", 400, true));
+        shoes.add(new Shoe("s104", "Adidas", 300, false));
+        shoes.add(new Shoe("s105", "Reebok", 200, true));
+        return shoes;
+    }
 }
