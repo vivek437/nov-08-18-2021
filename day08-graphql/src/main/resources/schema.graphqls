@@ -6,5 +6,6 @@ type Book {
 }
 
 type Query {
-    books: [Book]
+    all: [Book],
+    books(inStock: Boolean): [Book]
 }
