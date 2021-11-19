@@ -12,6 +12,11 @@ type Shoe {
     inStock: Boolean
 }
 
+type Mutation {
+    addBook(title: String!, price: Float): ID!,
+    addShoe(make: String!, price: Float): ID!
+}
+
 type Query {
     all: [Book],
     books(inStock: Boolean): [Book],

@@ -24,6 +24,11 @@ create table training.cars( id int(4) primary key not null auto_increment, model
 ### Graphql
 
 ```
+mutation {
+  addBook(title: "XYZ", price: 12.34)
+  addShoe(make: "Power", price: 1000)  
+}
+
 query {
   inStockBooks: books(inStock: true) {
     title
