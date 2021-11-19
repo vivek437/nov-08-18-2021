@@ -25,6 +25,32 @@ create table training.cars( id int(4) primary key not null auto_increment, model
 
 ```
 query {
+  inStockBooks: books(inStock: true) {
+    title
+  }
+  inStockShoes: shoes(inStock: true) {
+    make
+  }
+  oosStockBooks: books(inStock: false) {
+    title
+  }
+  oosStockShoes: shoes(inStock: false) {
+    make
+  }
+}
+
+query {
+  books: all {
+    title
+    price
+  }
+  shoes: allShoes {
+    make
+    price
+  }
+}
+
+query {
   allBooks: all {
     title
     price
