@@ -1,0 +1,11 @@
+server:
+  port: 8081
+spring:
+  security:
+    user:
+      name: sam
+      password: sam123
+
+
+  main:
+    allow-circular-references: true
